@@ -1,7 +1,7 @@
 # Shareboard
 
 ## Intro
-OOP PHP learning project using a mini framework and MVC. For simplicity, the DB will be Sqlite
+OOP PHP learning project using a mini framework and MVC.
 
 ## Requirements
 - PHP7
