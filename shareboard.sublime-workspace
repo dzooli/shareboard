@@ -1,0 +1,292 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "course_notes.md",
+			"settings":
+			{
+				"buffer_size": 4831,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "TODOs with Shareboard:\n  Development:\n    ☐ @high Finish Session 4 of the course\n    ☐ @high OOP with Databases section\n    ☐ @low Finalize the course material\n  Test environment:\n    ☐ Setup VPS homedir module\n    ☐ Setup VPS with PHP7\n  Demo environment:\n    ☐ Use the VPS for demo purposes\n",
+			"file": "tasks.todo",
+			"file_size": 305,
+			"file_write_time": 132001849608216869,
+			"settings":
+			{
+				"buffer_size": 293,
+				"line_ending": "Unix",
+				"name": ":TODOs"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"code",
+				"CodeTimeTracker: Open Dashboard"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"notes",
+				"Notes: New…"
+			],
+			[
+				"plant",
+				"Package Control: Install Package"
+			],
+			[
+				"proje",
+				"Project: Add Folder"
+			],
+			[
+				"tra",
+				"CodeTimeTracker: Open Dashboard"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/dzooli/public_html/shareboard"
+	],
+	"file_history":
+	[
+		"/home/dzooli/.var/app/com.sublimetext.three/config/sublime-text-3/Packages/PlainTasks/messages/Tutorial.todo",
+		"/home/dzooli/Dropbox/Notes/project_structure.note",
+		"/home/dzooli/public_html/shareboard/COMMIT_EDITMSG.COMMIT_EDITMSG",
+		"/home/dzooli/.var/app/com.sublimetext.three/config/sublime-text-3/Packages/Git/Git.sublime-settings",
+		"/home/dzooli/.var/app/com.sublimetext.three/config/sublime-text-3/Packages/User/Git.sublime-settings",
+		"/home/dzooli/Dokumentumok/mytasks.todo",
+		"/home/dzooli/Dokumentumok/Package Control Messages",
+		"/home/dzooli/public_html/shareboard/shareboard.sublime-project"
+	],
+	"find":
+	{
+		"height": 0.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "course_notes.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4831,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4828,
+								4828
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/MarkdownEditing/Markdown.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 5418.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "tasks.todo",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 293,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								293,
+								293
+							]
+						],
+						"settings":
+						{
+							"auto_name": ":TODOs",
+							"plain_tasks_remain_time_phantoms":
+							[
+							],
+							"syntax": "Packages/PlainTasks/PlainTasks.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 32.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 118.0
+	},
+	"pinned_build_system": "",
+	"project": "shareboard.sublime-project",
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 267.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

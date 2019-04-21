@@ -274,4 +274,46 @@ final class Bar {
 
 ### Object iteration
 
+$person4 and $person5 is unreachable outside the class but we can define a function _iterateObject()_ to reach all internal variables.
+```php
+<?php
 
+class People {
+    public $person1 = 'Mike';
+    public $person2 = 'Shelly';
+    public $person3 = 'Jeff';
+
+    protected $person4 = 'John';
+    private   $person4 = 'Jen';
+
+    public function itaretObject()
+    {
+        foreach ($this as $key => $value) {
+            print "$key => $value\n";
+        }
+    }
+}
+
+$people = new People;
+$people->iterateObject();
+```
+
+## Database handling with PDO
+
+### PDO Database: class & Connection
+
+See classes/Database.php as an example.
+
+### PDO Database: bind parameters and fetch the data
+
+See classes/Database.php : query(), bind(), execute() and resultset() functions.
+
+PHP foreach inside HTML
+```php
+<?php foreach($rows as $row) : ?>
+    <div>
+        <h3><?php echo $row['title']; ?></h3>
+        <p><?php echo $row['body']; ?></p>
+    </div>
+<?php endforeach; ?>
+```
