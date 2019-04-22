@@ -3,6 +3,24 @@
 	[
 		{
 			"path": "."
+		},
+		{
+			"path": "classes"
+		},
+		{
+			"path": "assets"
+		},
+		{
+			"path": "controllers"
+		},
+		{
+			"path": "models"
+		},
+		{
+			"path": "views"
+		},
+		{
+			"path": "doc"
 		}
 	]
 }

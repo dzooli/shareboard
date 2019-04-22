@@ -3,6 +3,38 @@
 	{
 		"selected_items":
 		[
+			[
+				"arra",
+				"array_map"
+			],
+			[
+				"str",
+				"str_replace"
+			],
+			[
+				"filter",
+				"filter_input_array"
+			],
+			[
+				"S",
+				"submit"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"is",
+				"is_int"
+			],
+			[
+				"is_n",
+				"is_null"
+			],
+			[
+				"pri",
+				"print_r"
+			]
 		]
 	},
 	"buffers":
@@ -11,19 +43,88 @@
 			"file": "course_notes.md",
 			"settings":
 			{
-				"buffer_size": 4831,
+				"buffer_size": 7497,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "TODOs with Shareboard:\n  Development:\n    ☐ @high Finish Session 4 of the course\n    ☐ @high OOP with Databases section\n    ☐ @low Finalize the course material\n  Test environment:\n    ☐ Setup VPS homedir module\n    ☐ Setup VPS with PHP7\n  Demo environment:\n    ☐ Use the VPS for demo purposes\n",
-			"file": "tasks.todo",
-			"file_size": 305,
-			"file_write_time": 132001849608216869,
+			"file": ".htaccess",
 			"settings":
 			{
-				"buffer_size": 293,
+				"buffer_size": 122,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config.php",
+			"settings":
+			{
+				"buffer_size": 110,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "assets/css/style.css",
+			"settings":
+			{
+				"buffer_size": 0,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "classes/Bootstrap.php",
+			"settings":
+			{
+				"buffer_size": 843,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "classes/Database.php",
+			"settings":
+			{
+				"buffer_size": 1984,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "create_schema.sql",
+			"settings":
+			{
+				"buffer_size": 211,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.php",
+			"settings":
+			{
+				"buffer_size": 212,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 166,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "tasks.todo",
+			"settings":
+			{
+				"buffer_size": 515,
+				"encoding": "UTF-8",
 				"line_ending": "Unix",
 				"name": ":TODOs"
 			}
@@ -40,6 +141,14 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"codet",
+				"CodeTimeTracker: Open Dashboard"
+			],
+			[
+				"taa",
+				"Tasks: View as HTML"
+			],
 			[
 				"code",
 				"CodeTimeTracker: Open Dashboard"
@@ -89,7 +198,7 @@
 	},
 	"expanded_folders":
 	[
-		"/home/dzooli/public_html/shareboard"
+		"/home/dzooli/public_html/shareboard/classes"
 	],
 	"file_history":
 	[
@@ -135,7 +244,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -144,15 +253,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4831,
+						"buffer_size": 7497,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4828,
-								4828
+								7496,
+								7496
 							]
 						],
 						"settings":
@@ -162,27 +271,251 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 5418.0,
+						"translation.y": 6689.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "tasks.todo",
+					"file": ".htaccess",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 293,
+						"buffer_size": 122,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								293,
-								293
+								53,
+								53
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "config.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 110,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								107,
+								107
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "assets/css/style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "classes/Bootstrap.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 843,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								681,
+								681
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "classes/Database.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1984,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								960,
+								960
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 795.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "create_schema.sql",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 211,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								210,
+								210
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SQL/SQL.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 212,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								209,
+								209
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 166,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								137,
+								137
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/MarkdownEditing/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "tasks.todo",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 515,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								216,
+								216
 							]
 						],
 						"settings":
@@ -197,7 +530,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 8,
 					"type": "text"
 				}
 			]
@@ -209,7 +542,7 @@
 	},
 	"input":
 	{
-		"height": 32.0
+		"height": 39.0
 	},
 	"layout":
 	{
@@ -246,7 +579,7 @@
 	"project": "shareboard.sublime-project",
 	"replace":
 	{
-		"height": 0.0
+		"height": 71.0
 	},
 	"save_all_on_build": true,
 	"select_file":

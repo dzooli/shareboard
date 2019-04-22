@@ -275,6 +275,7 @@ final class Bar {
 ### Object iteration
 
 $person4 and $person5 is unreachable outside the class but we can define a function _iterateObject()_ to reach all internal variables.
+
 ```php
 <?php
 
@@ -286,7 +287,7 @@ class People {
     protected $person4 = 'John';
     private   $person4 = 'Jen';
 
-    public function itaretObject()
+    public function iterateObject()
     {
         foreach ($this as $key => $value) {
             print "$key => $value\n";
@@ -309,6 +310,7 @@ See classes/Database.php as an example.
 See classes/Database.php : query(), bind(), execute() and resultset() functions.
 
 PHP foreach inside HTML
+
 ```php
 <?php foreach($rows as $row) : ?>
     <div>
@@ -317,3 +319,64 @@ PHP foreach inside HTML
     </div>
 <?php endforeach; ?>
 ```
+
+## The Project: Shareboard
+
+### MVC schema
+
+![Basics of MVC](./doc/mvc_basics.png "The basic MVC workflow")
+
+### Folder structure of an MVC application
+
+![Folders](./doc/folders.png "Preferred directory structure")
+
+### Rewrite rule for routing the requests to the controllers and call the proper actions
+
+Enter these lines to __<APP_ROOT>/.htaccess__ and enable the Options in the global webserver configuration:
+```
+RewriteEngine On
+RewriteRule ^([a-zA-Z]*)/?([a-zA-Z])?/?([a-zA-Z0-9]*)?/? index.php?controller=$1&action=$2&id=$3 [NC,L]
+```
+
+This is my own Bootstrap class because the course's rewrite rule does not work properly
+```php
+class Bootstrap {
+
+    private $controller;
+    private $action;
+    private $request;
+
+    public function __construct($request, $server_vars, $app_home)
+    {
+        $this->request = $this->processRequest($request, $server_vars, $app_home);
+        $this->controller = $this->request['controller'];
+        $this->action = $this->request['action'];
+    }
+
+    protected function processRequest($request, $server_vars, $app_home) {
+        $params = explode('/', str_replace($app_home, '',
+                          $server_vars['REQUEST_URI']));
+
+        $values = [];   
+        foreach ($params as $value) {
+            if ($value !== '') {
+                $values[] = $value;
+            }
+        }
+        
+        $i = 0;
+        $result = [
+            'controller' => 'home',
+            'action'     => 'index',
+            'id'         => null,
+        ];
+        foreach ($result as $pname => $pvalue) {
+            $result[$pname] = isset($values[$i])?$values[$i]:$result[$pname];
+            $i++;
+        }
+        return $result;
+    }
+
+}
+```
+
