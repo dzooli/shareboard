@@ -333,12 +333,14 @@ PHP foreach inside HTML
 ### Rewrite rule for routing the requests to the controllers and call the proper actions
 
 Enter these lines to __<APP_ROOT>/.htaccess__ and enable the Options in the global webserver configuration:
+
 ```
 RewriteEngine On
 RewriteRule ^([a-zA-Z]*)/?([a-zA-Z])?/?([a-zA-Z0-9]*)?/? index.php?controller=$1&action=$2&id=$3 [NC,L]
 ```
 
-This is my own Bootstrap class because the course's rewrite rule does not work properly
+This is my own Bootstrap class because the course's rewrite rule does not work properly.
+
 ```php
 class Bootstrap {
 
@@ -363,7 +365,7 @@ class Bootstrap {
                 $values[] = $value;
             }
         }
-        
+
         $i = 0;
         $result = [
             'controller' => 'home',
@@ -379,4 +381,3 @@ class Bootstrap {
 
 }
 ```
-

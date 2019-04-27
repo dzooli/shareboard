@@ -1,5 +1,3 @@
-<?php require('config.php'); ?>
-
 <!DOCTYPE html>
 <html>
 	<head>
@@ -16,7 +14,7 @@
 
 		  <div class="collapse navbar-collapse" id="navbarDefault">
 		    <ul class="navbar-nav mr-auto">
-		      <li class="nav-item active"> <a class="nav-link" href="<?php echo ROOT_URL; ?>">Home <span class="sr-only">(current)</span></a></li>
+		      <!-- <li class="nav-item active"> <a class="nav-link" href="<?php echo ROOT_URL; ?>">Home <span class="sr-only">(current)</span></a></li> -->
 		      <li class="nav-item active"> <a class="nav-link" href="<?php echo ROOT_URL; ?>/share">Shares</a> </li>
 		<!--
 		      <li class="nav-item"> <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> </li>

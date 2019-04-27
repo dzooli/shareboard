@@ -7,7 +7,7 @@ CREATE TABLE `shareboard`.`users` (
 	`name` VARCHAR(255) NOT NULL , 
 	`email` VARCHAR(255) NOT NULL , 
 	`password` VARCHAR(255) NOT NULL , 
-	`register_date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , 
+	`register_date` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , 
 	PRIMARY KEY (`id`)) 
 ENGINE = InnoDB 
 COMMENT = 'This is the table for our users';

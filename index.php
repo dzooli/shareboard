@@ -17,7 +17,7 @@ require('controllers/Share.php');
 // Include the bootstrapper
 require('classes/Bootstrap.php');
 
-$bootstrap = new Bootstrap($_GET, $_SERVER, $config['app_homedir']);
+$bootstrap = new Bootstrap($_GET);
 $controller = $bootstrap->createController();
 if ($controller){
 	$controller->executeAction();
