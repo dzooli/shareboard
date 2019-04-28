@@ -7,4 +7,5 @@ OOP PHP learning project using a mini framework and MVC.
 - PHP7
 - PHP-PDO
 - PDO-mysql
-- Apache configured with homedir module
+- MySQL or MariaDB server
+- Apache configured with homedir and rewrite module
