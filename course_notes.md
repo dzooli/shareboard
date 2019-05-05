@@ -335,49 +335,59 @@ PHP foreach inside HTML
 Enter these lines to __<APP_ROOT>/.htaccess__ and enable the Options in the global webserver configuration:
 
 ```
-RewriteEngine On
-RewriteRule ^([a-zA-Z]*)/?([a-zA-Z])?/?([a-zA-Z0-9]*)?/? index.php?controller=$1&action=$2&id=$3 [NC,L]
+RewriteEngine on
+RewriteRule ^([a-zA-Z]*)/?([a-zA-Z]*)?/?([a-zA-Z0-9]*)?/?$ index.php?controller=$1&action=$2&id=$3 [NC,L]
 ```
 
-This is my own Bootstrap class because the course's rewrite rule does not work properly.
+The Bootstrap class resolves the controller and the action and creates the corresponding Controller based on the QUERY_STRING parameter of the request.
 
 ```php
-class Bootstrap {
+<?php
 
+class Bootstrap{
     private $controller;
     private $action;
     private $request;
 
-    public function __construct($request, $server_vars, $app_home)
-    {
-        $this->request = $this->processRequest($request, $server_vars, $app_home);
-        $this->controller = $this->request['controller'];
-        $this->action = $this->request['action'];
+    public function __construct($request){
+        $this->request = $request;
+        if($this->request['controller'] == ""){
+            $this->controller = 'home';
+        } else {
+            $this->controller = $this->request['controller'];
+        }
+        if($this->request['action'] == ""){
+            $this->action = 'index';
+        } else {
+            $this->action = $this->request['action'];
+        }
     }
 
-    protected function processRequest($request, $server_vars, $app_home) {
-        $params = explode('/', str_replace($app_home, '',
-                          $server_vars['REQUEST_URI']));
-
-        $values = [];   
-        foreach ($params as $value) {
-            if ($value !== '') {
-                $values[] = $value;
+    public function createController(){
+        // Check Class
+        if(class_exists($this->controller)){
+            $parents = class_parents($this->controller);
+            // Check Extend
+            if(in_array("Controller", $parents)){
+                if(method_exists($this->controller, $this->action)){
+                    return new $this->controller($this->action, $this->request);
+                } else {
+                    // Method Does Not Exist
+                    echo '<h1>Method does not exist</h1>';
+                    return;
+                }
+            } else {
+                // Base Controller Does Not Exist
+                echo '<h1>Base controller not found</h1>';
+                return;
             }
+        } else {
+            // Controller Class Does Not Exist
+            echo '<h1>Controller class does not exist</h1>';
+            return;
         }
-
-        $i = 0;
-        $result = [
-            'controller' => 'home',
-            'action'     => 'index',
-            'id'         => null,
-        ];
-        foreach ($result as $pname => $pvalue) {
-            $result[$pname] = isset($values[$i])?$values[$i]:$result[$pname];
-            $i++;
-        }
-        return $result;
     }
-
 }
 ```
+
+
