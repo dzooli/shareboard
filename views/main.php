@@ -3,8 +3,8 @@
 	<head>
 		<title>Shareboard by dzooli</title>
 		<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
-		<link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.css">
-		<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+		<link rel="stylesheet" type="text/css" href="<?php echo(ROOT_PATH); ?>assets/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="<?php echo(ROOT_PATH); ?>assets/css/style.css">
 	</head>
 	<body>
 		 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -43,9 +43,9 @@
 		<!-- The main content goes here -->
 		<div class="container">
 
-		  <div class="row">
+		  <!-- <div class="row"> -->
 		    <?php require($view); ?>
-		  </div>
+		  <!-- </div> -->
 
 		</div><!-- /.container -->
 

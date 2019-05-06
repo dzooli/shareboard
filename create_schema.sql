@@ -21,7 +21,7 @@ CREATE TABLE `shareboard`.`shares`
 	`create_date` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , 
 	PRIMARY KEY (`id`)) 
 ENGINE = InnoDB 
-COMMENT = 'This table is used for storing short shared information';
+COMMENT = 'This table is used for storing short shared information and a link to it';
 
 INSERT INTO `shares` (`id`, `user_id`, `title`, `body`, `link`, `create_date`) 
 	VALUES 

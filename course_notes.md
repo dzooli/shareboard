@@ -390,4 +390,24 @@ class Bootstrap{
 }
 ```
 
+### The main loop of the Share card view
 
+See the commented lines if you want to display the information as unordered list. I prefer the basic flow of the page.
+
+```html
+<?php foreach($viewmodel as $item) : ?>
+        <!-- <li> -->
+        <div class="btn btn-info text-left btn-share">
+            <h4><?php echo $item['title']; ?></h4>
+            <span><small><?php echo $item['create_date']; ?></small></span>
+            <!-- <span class="text-right"><small><?php echo $item['user_id']; ?></small></span> -->
+            <hr />
+                <div class="form-control">
+                    <?php echo $item['body']; ?>
+                </div>
+                <hr />
+                <a class="btn btn-success" href="<?php echo $item['link']; ?>" target='_blank'>Go To Website</a>
+        </div>
+        <!-- </li> -->
+    <?php endforeach; ?>
+```
