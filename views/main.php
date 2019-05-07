@@ -31,12 +31,18 @@
 		      </li>
 		-->
 		    </ul>
-		<!-- Search field inside the NavBar
+
+		<!--  Search field inside the NavBar 
 		    <form class="form-inline my-2 my-lg-0">
 		      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
 		      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
 		    </form>
 		-->
+
+		    <ul class="nav navbar-nav navbar-right">
+			<li class='nav-item active'><a class='nav-link' href="<?php echo ROOT_URL; ?>users/login">Login</a></li>
+            		<li class='nav-item active'><a class='nav-link' href="<?php echo ROOT_URL; ?>users/register">Register</a></li>
+          	    </ul>
 		  </div>
 		</nav>
 

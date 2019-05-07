@@ -1,21 +1,19 @@
-<div>
-	<div class="panel panel-default">
-		<div class="panel-title">
-			<h3 class="panel-title">Share Something!</h3>
-		</div>
-		<div class="panel-body">
+<br />
+	<div class="card">
+		<div class="card-body">
+			<h3 class='card-title'>Share Something!</h3>
 			<form method="post" action="<?php echo ROOT_PATH,'share/add'; ?>">
-				<div class="form-inline">
-					<label>Shared Title: </label>
-					<input type="text" name="title" class="form-control" />
+				<div class="form-group row">
+					<label class='col-sm-2 col-form-label'>Shared Title: </label>
+					<input type="text" name="title" class="col-sm-10 form-control" />
 				</div>
-				<div class="form-inline">
-					<label>Shared Link: </label>
-					<input type="text" name="link" class="form-control" />
+				<div class="form-group row">
+					<label class='col-sm-2 col-form-label'>Shared Link: </label>
+					<input type="text" name="link" class="col-sm-10 form-control" />
 				</div>
-				<div class="form-inline">
-					<label>Shared Text: </label>
-					<textarea type="text" name="body" class="form-control"></textarea>
+				<div class="form-group row">
+					<label class='col-sm-2 col-form-label'>Shared Text: </label>
+					<textarea type="text" name="body" rows=6 class="col-sm-10 form-control"></textarea>
 				</div>
 				<br />
 				<input class="btn btn-primary" type="submit" name="submit" value="Done" />
@@ -23,4 +21,3 @@
 			</form>
 		</div>
 	</div>
-</div>

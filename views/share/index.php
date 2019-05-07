@@ -3,16 +3,18 @@
 	<!-- <ul> -->
 	<?php foreach($viewmodel as $item) : ?>
 		<!-- <li> -->
-		<div class="btn btn-info text-left btn-share">
-			<h4><?php echo $item['title']; ?></h4>
+		<div align='left' class="card">
+		   <div class='card-body'>
+			<h4 class='card-title'><?php echo $item['title']; ?></h4>
 			<span><small><?php echo $item['create_date']; ?></small></span>
 			<!-- <span class="text-right"><small><?php echo $item['user_id']; ?></small></span> -->
 			<hr />
-				<div class="form-control">
+				<div class="card-text">
 					<?php echo $item['body']; ?>
 				</div>
 				<hr />
-				<a class="btn btn-success" href="<?php echo $item['link']; ?>" target='_blank'>Go To Website</a>
+				<a class="card-link" href="<?php echo $item['link']; ?>" target='_blank'>Read more</a>
+		   </div>
 		</div>
 		<!-- </li> -->
 	<?php endforeach; ?>
