@@ -40,8 +40,8 @@
 		-->
 
 		    <ul class="nav navbar-nav navbar-right">
-			<li class='nav-item active'><a class='nav-link' href="<?php echo ROOT_URL; ?>users/login">Login</a></li>
-            		<li class='nav-item active'><a class='nav-link' href="<?php echo ROOT_URL; ?>users/register">Register</a></li>
+			<li class='nav-item active'><a class='nav-link' href="<?php echo ROOT_URL; ?>/user/login">Login</a></li>
+            		<li class='nav-item active'><a class='nav-link' href="<?php echo ROOT_URL; ?>/user/register">Register</a></li>
           	    </ul>
 		  </div>
 		</nav>

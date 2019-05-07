@@ -15,7 +15,6 @@
 					<label class='col-sm-2 col-form-label'>Shared Text: </label>
 					<textarea type="text" name="body" rows=6 class="col-sm-10 form-control"></textarea>
 				</div>
-				<br />
 				<input class="btn btn-primary" type="submit" name="submit" value="Done" />
 				<a class="btn btn-danger" href="<?php echo ROOT_PATH; ?>share">Cancel</a>
 			</form>
