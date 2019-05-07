@@ -11,8 +11,16 @@ OOP PHP learning project using a mini framework and MVC.
 - PDO-mysql
 - MySQL or MariaDB server
 - Apache configured with homedir and rewrite module
+- Bootstrap4 (at least the CSS file)
 
 ## Screenshots
 
-![The main view](preview_001.png "Shareboard main screen")
+### Main screen
+![The main view](home_screen.png "Shareboard main screen")
+
+### Shares
+![Shares view](shares_screen.png "Shareboard shared information list")
+
+### Add new share
+![Add a new shared information](add_share.png "Shareboard add share screen")
 
