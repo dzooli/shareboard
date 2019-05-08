@@ -18,6 +18,7 @@ require('controllers/Share.php');
 require('classes/Bootstrap.php');
 
 $bootstrap = new Bootstrap($_GET);
+Bootstrap::disableCache();
 $controller = $bootstrap->createController();
 if ($controller){
 	$controller->executeAction();

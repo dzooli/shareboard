@@ -411,3 +411,17 @@ See the commented lines if you want to display the information as unordered list
         <!-- </li> -->
     <?php endforeach; ?>
 ```
+
+## Additional features
+
+### Static function of Bootstrap for disabling browser side cache
+
+```php
+    public static function disableCache() {
+        header( 'Expires: Sat, 26 Jul 1970 05:00:00 GMT' ); 
+        header( 'Last-Modified: ' . gmdate( 'D, d M Y H:i:s' ) . ' GMT' ); 
+        header( 'Cache-Control: no-store, no-cache, must-revalidate' ); 
+        header( 'Cache-Control: post-check=0, pre-check=0, max-age=0, s-maxage=0', false ); 
+        header( 'Pragma: no-cache' );       
+    }
+```

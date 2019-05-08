@@ -12,8 +12,6 @@ class UserModel extends Model {
 		if ($post['submit']) {
 		  // All data is provided
 			if ($post['email'] && $post['name'] && $post['password'] && $post['passwordagain']) {
-				// Status message
-				echo "<div class='alert alert-success' role='alert'>User REGISTRATION in progress...</div>\n";
 				// Check the matching passwords
 		  		if ($post['password'] !== $post['passwordagain']) {
 			   		echo "<div class='alert alert-danger' role='alert'>Password does not match!</div>\n";
@@ -30,20 +28,21 @@ class UserModel extends Model {
 				$this->query('INSERT INTO users (name, email, password) VALUES (:name, :email, :password)');
 				$this->bind(':name', $post['name']);
 				$this->bind(':email', $post['email']);
-				$this->bind(':password', md5($post['password']));
+				$this->bind(':password', md5($post['password']));	// Always use encrypted passwords
 				// Insert the neq user
 				$this->execute();
 				// Verify
 				if ($this->lastInsertId()) {
-					// Successfull insertion
-					echo "<div class='alert alert-success' role='alert'>Successful registration</div>\n";
-					header('Location: ', ROOT_URL);
+					// Successfull insert
+					ob_start();
+					header('Location: '.ROOT_URL.'user/login');
+					ob_end_flush();
+					die();
 				} else {
 					// User registration database error
 					echo "<div class='alert alert-danger' role='alert'>Registration failed!</div>\n";
 					return;
 				}
-
 			} else {
 				// Missing input data
 				echo "<div class='alert alert-danger' role='alert'>Please provide all information!</div>\n";
@@ -58,5 +57,10 @@ class UserModel extends Model {
 		$this->bind(':mail', $mailaddr);
 		$this->execute();
 		return $this->resultSet();
+	}
+
+	public function login($value='')
+	{
+		die('NOT IMPLEMENTED');
 	}
 }
