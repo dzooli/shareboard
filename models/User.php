@@ -61,6 +61,44 @@ class UserModel extends Model {
 
 	public function login($value='')
 	{
-		die('NOT IMPLEMENTED');
+		$post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+
+		// Submit pressed
+		if ($post['submit']) {
+		    // All data is provided
+    		    if ($post['email'] && $post['password']) {
+    			// Encode the password
+			$password = md5($post['password']);
+			// Search the user in the DB
+			$this->query('SELECT * FROM users WHERE email = :email AND password = :password');
+			$this->bind(':email', $post['email']);
+			$this->bind(':password', $password);
+			$this->execute();
+			$result = $this->single();
+			// echo '<pre>', var_dump($result), '</pre>';	// For debugging only
+			// Successfull user login -> redirect to the share/index page
+			if ($result) {
+			    // Setup the session data
+			    session_start();
+			    $_SESSION['logged_in'] = true;
+			    $_SESSION['user_data'] = array (
+				'id' 	=> $result['id'],
+				'name' 	=> $result['name'],
+				'email' => $result['email']
+			    );
+			    //echo '<pre>', var_dump($_SESSION), '</pre>';	// For debugging only			    
+			    // Redirect to the shares/index page
+			    header('Location: '.ROOT_URL.'/share');
+			    return;
+			// Login failed
+			} else {
+			    echo "<div class='alert alert-danger' role='alert'>Invalid e-mail or password!</div>\n";
+			    return;
+			}
+		    } else { // Missing input data
+			echo "<div class='alert alert-danger' role='alert'>Please provide e-mail and password</div>\n";
+			return;
+		    }
+		}
 	}
 }
