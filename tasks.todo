@@ -6,7 +6,9 @@ TODOs with Shareboard:
     ✔ @high Fix Bootstrap.php and the RewriteRules @done (19-04-27 15:46)
     ✔ @high Finalize the 6th session of the course @done (19-05-05 15:42)
     ☐ @high Finalize the 7th session of the course
+    ☐ @high Finaleize the 8th session of the course
     ☐ @low Finalize the course material
+    ☐ @high Create the initial DB content for demonstration purposes
   Test environment:
     ✔ Setup VPS homedir module @done (19-05-05 15:43)
     ✔ Setup VPS with PHP7 @done (19-05-05 15:43)
@@ -14,5 +16,5 @@ TODOs with Shareboard:
     ☐ Use the VPS for demo purposes
     ✔ Setup userdir on the VPS @done (19-05-05 15:43)
     ✔ Setup git user @done (19-05-05 15:43)
-    ☐ Clone the repository to dzooli's homedir
+    ✔ Clone the repository to dzooli's homedir @done (19-05-12 15:37)
 

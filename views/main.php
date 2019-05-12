@@ -61,7 +61,11 @@
 		<div class="container">
 
 		  <!-- <div class="row"> -->
-		    <?php require($view); ?>
+		    <?php
+		    // echo '<pre>', var_dump($_SESSION), '</pre>'; // for debugging purposes only
+		    	Messages::display(); 
+		    	require($view); 
+		    ?>
 		  <!-- </div> -->
 
 		</div><!-- /.container -->

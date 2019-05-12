@@ -1,4 +1,9 @@
 <br />
+<!--	<?php if(!UserModel::isLoggedIn()) {
+		Messages::setMsg('danger', 'Please login first to share something!');
+		Messages::display();
+	} ?>
+-->
 	<div class="card">
 		<div class="card-body">
 			<h3 class='card-title'>Share Something!</h3>

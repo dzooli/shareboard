@@ -7,6 +7,10 @@ class Share extends Controller {
 	}
 
 	protected function Add() {
+		if (!UserModel::isLoggedIn()) {
+			header('Location: '.ROOT_URL.'share');
+			return;
+		}
 		$viewmodel = new ShareModel();
 		$this->returnView($viewmodel->add(), true);
 	}

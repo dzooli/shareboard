@@ -77,7 +77,6 @@ class UserModel extends Model {
 			// Successfull user login -> redirect to the share/index page
 			if ($result) {
 			    // Setup the session data
-			    session_start();
 			    $_SESSION['logged_in'] = true;
 			    $_SESSION['user_data'] = array (
 					'id' 	=> $result['id'],
@@ -89,26 +88,26 @@ class UserModel extends Model {
 			    return;
 			// Login failed
 			} else {
-			    echo "<div class='alert alert-danger' role='alert'>Invalid e-mail or password!</div>\n";
+			    Messages::setMsg('Incorrect login!', 'danger');
 			    return;
 			}
 		    } else { // Missing input data
-			echo "<div class='alert alert-danger' role='alert'>Please provide e-mail and password</div>\n";
+			Messages::setMsg('Please provide e-mail and password!', 'warning');
 			return;
 		    }
 		}
 	}
 
 	public function logout() {
-		session_start();
-		$_SESSION['logged_in'] = false;
+		unset($_SESSION['logged_in']);
 		unset($_SESSION['user_data']);
+		session_destroy();
+		// Redirect to Landing page
 		header('Location: '.ROOT_URL);
 		return;
 	}
 
 	public static function isLoggedIn() {
-		session_start();
 		return (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true);
 	}
 }

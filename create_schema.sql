@@ -29,7 +29,7 @@ INSERT INTO `shares` (`id`, `user_id`, `title`, `body`, `link`, `create_date`)
 		'1', 
 		'Share One', 
 		'This is the first share of the Shareboard application.\r\nBasic MVC and routing functionality is OK now.', 
-		'http://localhost/~dzooli/shareboard/share', 
+		'http://theguardian.com', 
 		current_timestamp()
 	);
 INSERT INTO `shares` (`id`, `user_id`, `title`, `body`, `link`, `create_date`) 
