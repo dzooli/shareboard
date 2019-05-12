@@ -425,3 +425,12 @@ See the commented lines if you want to display the information as unordered list
         header( 'Pragma: no-cache' );       
     }
 ```
+
+### Using the Messages class
+
+```php
+// Somewhere if you need to display a flash message
+Messages::setMsg('Some text', 'danger|warning|success|info');
+
+// In the main view page
+Messages::display();
