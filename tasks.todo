@@ -5,10 +5,10 @@ TODOs with Shareboard:
     ✔ @high Finalize the 5th session of the course @done (19-04-21 18:20)
     ✔ @high Fix Bootstrap.php and the RewriteRules @done (19-04-27 15:46)
     ✔ @high Finalize the 6th session of the course @done (19-05-05 15:42)
-    ☐ @high Finalize the 7th session of the course
-    ☐ @high Finaleize the 8th session of the course
-    ☐ @low Finalize the course material
-    ☐ @high Create the initial DB content for demonstration purposes
+    ✔ @high Finalize the 7th session of the course @done (19-05-12 16:53)
+    ✔ @high Finaleize the 8th session of the course @done (19-05-12 16:53)
+    ✔ @low Finalize the course material @done (19-05-12 16:53)
+    ✔ @high Create the initial DB content for demonstration purposes @done (19-05-12 16:53)
   Test environment:
     ✔ Setup VPS homedir module @done (19-05-05 15:43)
     ✔ Setup VPS with PHP7 @done (19-05-05 15:43)

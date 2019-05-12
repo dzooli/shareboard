@@ -412,7 +412,7 @@ See the commented lines if you want to display the information as unordered list
     <?php endforeach; ?>
 ```
 
-## Additional features
+## Additional features and functions
 
 ### Static function of Bootstrap for disabling browser side cache
 
@@ -424,6 +424,12 @@ See the commented lines if you want to display the information as unordered list
         header( 'Cache-Control: post-check=0, pre-check=0, max-age=0, s-maxage=0', false ); 
         header( 'Pragma: no-cache' );       
     }
+```
+
+### Static function for the UserModel - isLoggedIn()
+```php
+// Usage
+UserModel::isLoggedIn();
 ```
 
 ### Using the Messages class
