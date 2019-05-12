@@ -15,6 +15,6 @@ define('DB_NAME', 'shareboard');
 // URL definitions
 define('ROOT_PATH', '/~dzooli/shareboard/');
 //define('ROOT_URL', 'http://localhost:8151/~dzooli/shareboard/');
-define('ROOT_URL', 'http://localhost:8151/~dzooli/shareboard/');
+define('ROOT_URL', 'http://localhost/~dzooli/shareboard/');
 // PATH definitions
 define('ABS_PATH', '/home/dzooli/public_html/shareboard');

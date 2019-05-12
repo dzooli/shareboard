@@ -10,7 +10,7 @@ class UserModel extends Model {
 		$post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 		// Process the POST data if any
 		if ($post['submit']) {
-		  // All data is provided
+		  	// All data is provided
 			if ($post['email'] && $post['name'] && $post['password'] && $post['passwordagain']) {
 				// Check the matching passwords
 		  		if ($post['password'] !== $post['passwordagain']) {
@@ -19,7 +19,6 @@ class UserModel extends Model {
 				}
 				// Check for the existing user
 				$exusers = $this->searchByMail($post['email']);
-				// echo '<pre>',var_dump($exusers),'</pre>\n';
 				if (isset($exusers) && count($exusers)>0) {
 					echo "<div class='alert alert-danger' role='alert'>User already registered! Please use a different e-mail address!</div>\n";
 					return;
@@ -29,7 +28,7 @@ class UserModel extends Model {
 				$this->bind(':name', $post['name']);
 				$this->bind(':email', $post['email']);
 				$this->bind(':password', md5($post['password']));	// Always use encrypted passwords
-				// Insert the neq user
+				// Insert the new user
 				$this->execute();
 				// Verify
 				if ($this->lastInsertId()) {
@@ -75,18 +74,16 @@ class UserModel extends Model {
 			$this->bind(':password', $password);
 			$this->execute();
 			$result = $this->single();
-			// echo '<pre>', var_dump($result), '</pre>';	// For debugging only
 			// Successfull user login -> redirect to the share/index page
 			if ($result) {
 			    // Setup the session data
 			    session_start();
 			    $_SESSION['logged_in'] = true;
 			    $_SESSION['user_data'] = array (
-				'id' 	=> $result['id'],
-				'name' 	=> $result['name'],
-				'email' => $result['email']
+					'id' 	=> $result['id'],
+					'name' 	=> $result['name'],
+					'email' => $result['email']
 			    );
-			    //echo '<pre>', var_dump($_SESSION), '</pre>';	// For debugging only			    
 			    // Redirect to the shares/index page
 			    header('Location: '.ROOT_URL.'/share');
 			    return;
@@ -100,5 +97,18 @@ class UserModel extends Model {
 			return;
 		    }
 		}
+	}
+
+	public function logout() {
+		session_start();
+		$_SESSION['logged_in'] = false;
+		unset($_SESSION['user_data']);
+		header('Location: '.ROOT_URL);
+		return;
+	}
+
+	public static function isLoggedIn() {
+		session_start();
+		return (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true);
 	}
 }

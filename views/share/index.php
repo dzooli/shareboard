@@ -1,8 +1,10 @@
 <div>
-	<p><a class="btn btn-success btn-share" href="<?php echo ROOT_PATH; ?>share/add">Share Something</a></p>
-	<!-- <ul> -->
+	<?php if(UserModel::isLoggedIn()) : ?>
+		<p><a class="btn btn-success btn-share" href="<?php echo ROOT_PATH; ?>share/add">Share Something</a></p>
+	<?php else : ?>
+	    <p></p>
+	<?php endif ; ?>
 	<?php foreach($viewmodel as $item) : ?>
-		<!-- <li> -->
 		<div align='left' class="card">
 		   <div class='card-body'>
 			<h4 class='card-title'><?php echo $item['title']; ?></h4>
@@ -16,7 +18,5 @@
 				<a class="card-link" href="<?php echo $item['link']; ?>" target='_blank'>Read more</a>
 		   </div>
 		</div>
-		<!-- </li> -->
 	<?php endforeach; ?>
-	<!-- </ul> -->
 </div>

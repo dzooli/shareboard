@@ -40,9 +40,15 @@
 		-->
 
 		    <ul class="nav navbar-nav navbar-right">
-			<?php session_start(); if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) : ?>
-    			    <li class='nav-item active'><a class='nav-link' href="<?php echo ROOT_URL; ?>/user/profile">Welcome <?php echo $_SESSION['user_data']['name']; ?>!</a></li>
-            		    <li class='nav-item active'><a class='nav-link' href="<?php echo ROOT_URL; ?>/user/logout">Logout</a></li>
+			<?php if(UserModel::isLoggedIn()) : ?>
+    			    <li class='nav-item active'>
+    			    	<!-- Profile page link -->
+    			    	<!-- <a class='nav-link' href="<?php echo ROOT_URL; ?>/user/profile">Welcome <?php echo $_SESSION['user_data']['name']; ?>!</a> -->
+    			    	<a class='nav-link disabled'>Welcome <?php echo $_SESSION['user_data']['name']; ?>!</a>
+    			    </li>
+            		<li class='nav-item active'>
+            			<a class='nav-link' href="<?php echo ROOT_URL; ?>/user/logout">Logout</a>
+            		</li>
             		<?php else : ?>
     			    <li class='nav-item active'><a class='nav-link' href="<?php echo ROOT_URL; ?>/user/login">Login</a></li>
             		    <li class='nav-item active'><a class='nav-link' href="<?php echo ROOT_URL; ?>/user/register">Register</a></li>
@@ -53,7 +59,6 @@
 
 		<!-- The main content goes here -->
 		<div class="container">
-		  <?php echo '<pre>', var_dump($_SESSION), '</pre>'; ?>
 
 		  <!-- <div class="row"> -->
 		    <?php require($view); ?>
