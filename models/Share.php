@@ -13,9 +13,11 @@ class ShareModel extends Model {
 		
 		// Process the POST data if any
 		if ($post['submit']) {
-			// Count current shares
-			//$this->query('SELECT * FROM shares');
-			//$excount = count($this->resultSet());
+			// Check for input data
+			if ($post['title'] == '' || $post['body'] == '' || $post['link'] == '') {
+				Messages::setMsg('Please fill in all fields!', 'danger');
+				return;
+			}
 			// Insert into mysql
 			$this->query('INSERT INTO shares (title, body, link, user_id) VALUES (:title, :body, :link, :user_id)');
 			$this->bind(':title', $post['title']);
@@ -23,9 +25,7 @@ class ShareModel extends Model {
 			$this->bind(':link', $post['link']);
 			$this->bind(':user_id', 1);
 			$this->execute();
-			// Verify by counting again
-			//$this->query('SELECT * FROM shares');
-			//$ccount = count($this->resultSet());
+			// Verify
 			if ($this->lastInsertId()) {
 				// Redirect
 				header('Location: '.ROOT_URL.'share');

@@ -14,13 +14,13 @@ class UserModel extends Model {
 			if ($post['email'] && $post['name'] && $post['password'] && $post['passwordagain']) {
 				// Check the matching passwords
 		  		if ($post['password'] !== $post['passwordagain']) {
-			   		echo "<div class='alert alert-danger' role='alert'>Password does not match!</div>\n";
+			   		Messages::setMsg('Password does not match!', 'danger');
 			   		return;
 				}
 				// Check for the existing user
 				$exusers = $this->searchByMail($post['email']);
 				if (isset($exusers) && count($exusers)>0) {
-					echo "<div class='alert alert-danger' role='alert'>User already registered! Please use a different e-mail address!</div>\n";
+					Messages::setMsg('User already registered! Please use a different e-mail address!', 'danger');
 					return;
 				}
 				// Prepare the insert query using MD5-summed passwords
@@ -39,12 +39,12 @@ class UserModel extends Model {
 					die();
 				} else {
 					// User registration database error
-					echo "<div class='alert alert-danger' role='alert'>Registration failed!</div>\n";
+					Messages::setMsg('Registration failed! Database error!', 'danger');
 					return;
 				}
 			} else {
 				// Missing input data
-				echo "<div class='alert alert-danger' role='alert'>Please provide all information!</div>\n";
+				Messages::setMsg('Please provide all information!', 'warning');
 				return;
 			}
 		return;
